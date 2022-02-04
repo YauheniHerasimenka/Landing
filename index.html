@@ -26,7 +26,7 @@
 
 	<!-- Fonts and Material Icons -->
 	<link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600,700|Material+Icons"/>
- 
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body class="slides horizontal simplifiedMobile animated">
 		
@@ -112,25 +112,29 @@
     </div>
     <div class="center">
       
-     <!-- <ul class="menu PrimaryNav with-indicator">
-        <li><a href="#" class="toSlide- 0">Home</a></li>
+      <ul class="menu">
+        <li><a href="#" class="toFirstSlide">Home</a></li>
         <li><a href="#" class="toSlide- 1">Art</a></li>
         <li><a href="#" class="toSlide- 2">Games</a></li>
         <li><a href="#" class="toSlide- 3">Tourism</a></li>
-      </ul>-->
+        <li><a href="#" class="toSlide- 4">Education</a></li>
+        <li><a href="#" class="toSlide- 5">Field service instructions</a></li>
+        <li><a href="#" class="toSlide- 6">Contact us</a></li>
+      </ul>
     </div>
     <div class="right">
      <!-- <a class="button blue gradient" href="#">Profile</a><a class="button green gradient" href="#">Get App</a>-->
     </div>
   </div>
   <div class="sections compact hidden">
-    <div class="left"><a href="#" title="Slides Framework"><svg style="width:82px;height:24px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg></a></div>
+    <!--<div class="left"><a href="#" title="Slides Framework"><svg style="width:82px;height:24px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg></a></div>
     <div class="right"><span class="button actionButton sidebarTrigger" data-sidebar-id="1"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use></svg></span</div>
+    -->
   </div>
 </nav>
 
 <!-- Sidebar -->
-<nav class="sidebar" data-sidebar-id="1">
+<!-- <nav class="sidebar" data-sidebar-id="1">
   <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
   <div class="content">
     <a href="#" class="logo"><svg width="37" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-icon"></use></svg></a>
@@ -156,7 +160,7 @@
     </ul>
   </div>
 </nav>
-
+-->
 <!-- Slide 5 (#91) -->
 <section class="slide fade-6 kenBurns">
   <div class="content">
@@ -516,11 +520,18 @@
   <div class="sections desktop">
     <div class="left"><!--<a href="#" class="opacity-8">Available <svg style="height:21px;"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#apple"></use></svg> iPhone</a>--></div>
     <div class="center"><span class="nextSlide"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-down"></use></svg></span></div>
-    <div class="right"><span data-dropdown-id="2" class="button actionButton dropdownTrigger"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use></svg></span></div>
+    <div class="right">
+      <!--<span data-dropdown-id="2" class="button actionButton dropdownTrigger"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use></svg></span>-->
+      <!--<a href="#" class="button blue gradient ae-4" >Contact us</a>-->
+      <i class="fas fa-envelope-open-text toLastSlide" style="font-size: 30px;
+      cursor: pointer;"></i>
+    </div>
   </div>
   <div class="sections compact hidden">
     <div class="right">
-      <span data-dropdown-id="2" class="button actionButton dropdownTrigger"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use></svg></span>
+     <!-- <span data-dropdown-id="2" class="button actionButton dropdownTrigger"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use></svg></span>-->
+     <i class="fas fa-envelope-open-text toLastSlide" style="font-size: 30px;
+     cursor: pointer;"></i>
     </div>
   </div>
 </nav>
