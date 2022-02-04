@@ -1,0 +1,9 @@
+.desktop-show{
+    display: table !important;
+}
+
+@media (max-width: 800px) {
+    .desktop-show {
+        display: none !important;
+    }
+  }
