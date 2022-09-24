@@ -137,7 +137,7 @@
 
 
     <!-- Slide 5 (#91) -->
-    <section class="slide fade-6 kenBurns">
+    <section class="slide fade-6 kenBurns" id="sc-0">
         <div class="content">
             <div class="container">
                 <div class="wrap">
@@ -180,7 +180,7 @@
 </section>
 
 <!-- Slide 1 (#34) -->
-<section class="slide fade-6 kenBurns">
+<section class="slide fade-6 kenBurns" id="sc-1">
   <div class="content">
     <div class="container">
       <div class="wrap">
@@ -209,7 +209,7 @@
     </section>
 
 
-    <section class="slide fade-6 kenBurns">
+    <section class="slide fade-6 kenBurns" id="sc-2">
         <div class="content">
             <div class="container">
                 <div class="wrap">
@@ -251,7 +251,7 @@
 
 
     <!-- Slide 2 (#60) -->
-    <section class="slide fade-6 kenBurns">
+    <section class="slide fade-6 kenBurns" id="sc-3">
         <div class="content">
             <div class="container">
                 <div class="wrap">
@@ -298,7 +298,7 @@
 
 
     <!-- Slide 3 (#27) -->
-    <section class="slide fade-6 kenBurns">
+    <section class="slide fade-6 kenBurns" id="sc-4">
         <div class="content">
             <div class="container">
                 <div class="wrap">
@@ -344,7 +344,7 @@
     </section>
 
     <!-- Slide 4 (#26) -->
-    <section class="slide fade-6 kenBurns">
+    <section class="slide fade-6 kenBurns" id="sc-5">
         <div class="content">
             <div class="container">
                 <div class="wrap">
@@ -393,7 +393,7 @@
 
 
     <!-- Slide 4 (#26) -->
-    <section class="slide fade-6 kenBurns">
+    <section class="slide fade-6 kenBurns" id="sc-6">
         <div class="content">
             <div class="container">
                 <div class="wrap">
@@ -474,7 +474,7 @@
 -->
 
     <!-- Slide 7 (#95) -->
-    <section class="slide fade-6 kenBurns">
+    <section class="slide fade-6 kenBurns" id="sc-7">
         <div class="content">
             <div class="container">
                 <div class="wrap">
@@ -499,7 +499,7 @@
     </section>
 
     <!-- Panel Bottom #01 -->
-    <nav class="panel bottom forceMobileView">
+    <nav class="panel bottom forceMobileView" id="sc-8">
         <div class="sections desktop">
             <div class="left">
                 <!--<a href="#" class="opacity-8">Available <svg style="height:21px;"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#apple"></use></svg> iPhone</a>--></div>
@@ -550,6 +550,44 @@
     <script src="js/slides1.js" type="text/javascript"></script>
 
     <script>
+        //console.log(window.innerWidth);
+        if (window.innerWidth <= 800) {
+            var mainDiv = null;
+            var timer = null;
+            window.addEventListener('scroll', function() {
+                if (timer !== null) {
+                    clearTimeout(timer);
+                }
+                timer = setTimeout(function() {
+                    // do something
+                    if (mainDiv != null) {
+                        // console.log('stop, id: ' + mainDiv.attr('id'));
+                        document.getElementById(mainDiv.attr('id')).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                        mainDiv = null;
+                    }
+                }, 150);
+            }, false);
+
+            $(function() {
+                $(window).bind('scroll', function() {
+                    $('.slide').each(function() {
+                        var post = $(this);
+                        //console.log(post.position().top);
+                        var position = post.position().top - ($(window).scrollTop() + (window.innerHeight / 2));
+
+                        if (position <= 0) {
+                            //console.log(post[0]);
+                            //post.addClass('selected');
+                            mainDiv = post;
+                        } else {
+                            // post.removeClass('selected');
+                        }
+                    });
+                });
+            });
+        }
     </script>
 </body>
 
